@@ -177,41 +177,45 @@
       
         <p>最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。</p>
 <h2 id="正则表达式-它是什么"><a href="#正则表达式-它是什么" class="headerlink" title="正则表达式 它是什么"></a><center>正则表达式 它是什么</center></h2><p>当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。</p>
-<h2 id="正则表"><a href="#正则表" class="headerlink" title="正则表"></a><center>正则表</center></h2><pre><code>. 匹配单个任意字符&lt;br&gt;
+<h2 id="正则表"><a href="#正则表" class="headerlink" title="正则表"></a><center>正则表</center></h2><pre><code>. 匹配单个任意字符
 
-^ or \A ^aaa 匹配以aaa开头的字符串&lt;br&gt;
+^ or \A ^aaa 匹配以aaa开头的字符串
 
-$or\Z aaa$匹配已aaa作为结尾，一般情况不会单独使用，因为单独使用只是匹配这个字符串不会匹配额外的&lt;br&gt;
+$or\Z aaa$匹配已aaa作为结尾，一般情况不会单独使用，因为单独使用只是匹配这个字符串不会匹配额外的
 
-[ ] b[aeiou]t 单个元素可为集合匹配bat\bet\bit\bot\but&lt;br&gt;
+[ ] b[aeiou]t 单个元素可为集合匹配bat\bet\bit\bot\but
 
-- 范围规范符号，[A-Z] 为A-Z之间任意元素&lt;br&gt;
+- 范围规范符号，[A-Z] 为A-Z之间任意元素
 
-^ 紧跟左括号后面除去这个[]内元素外其他元素匹配 [^abc]除abc外的元素&lt;br&gt;
+^ 紧跟左括号后面除去这个[]内元素外其他元素匹配 [^abc]除abc外的元素
 
-* 前面表达式n次或0次出现，记忆方法：*向四周又五个边所以范围最大&lt;br&gt;
+* 前面表达式n次或0次出现，记忆方法：*向四周又五个边所以范围最大
 
-+ 前面表达式1次或者n次出现，记忆方法：+向四周有4个就其次&lt;br&gt;
++ 前面表达式1次或者n次出现，记忆方法：+向四周有4个就其次
 
-？ 前面表达式0次或1次出现，记忆方法：？没有所以就0次或1次啦&lt;br&gt;
+？ 前面表达式0次或1次出现，记忆方法：？没有所以就0次或1次啦
 
-{} [0-9]{n，m}匹配n次或者m次0-9的数&lt;br&gt;
+{} [0-9]{n，m}匹配n次或者m次0-9的数
 
-\w 表示[A-Za-z0-9],说白了就是一般用户名设置的字符限制 ，大写版表示不匹配&lt;br&gt;
+\w 表示[A-Za-z0-9],说白了就是一般用户名设置的字符限制 ，大写版表示不匹配
 
-\d 表示0-9单个字符，大写版表示不匹配&lt;br&gt;
+\d 表示0-9单个字符，大写版表示不匹配
 
-\s 表示空格字符，大写版表示不匹配&lt;br&gt;
+\s 表示空格字符，大写版表示不匹配
 
-() ()括起来得表达式是可以在函数层面进行抽离获取的&lt;br&gt;</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+() ()括起来得表达式是可以在函数层面进行抽离获取的</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="符号的使用"><a href="#符号的使用" class="headerlink" title="符号的使用"></a>符号的使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们先要了解 . * ^ $这四个符号的区别</span><br></pre></td></tr></table></figure>
+<h2 id="符号的使用"><a href="#符号的使用" class="headerlink" title="符号的使用"></a><center>符号的使用</center></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">我们用几个例子来了解 . * ^ $这几个符号在代码中的用法</span><br><span class="line">	text = <span class="string">'W66618976451ssss'</span></span><br><span class="line">	pattern = <span class="string">''</span></span><br><span class="line">	end_text = re.search(pattern,text)</span><br><span class="line">	<span class="built_in">print</span>(end_text.group(0))</span><br><span class="line">	上面这段代码text代表文本内容，通过设置pattern的正则表达式来输出获取想要的内容</span><br><span class="line"></span><br><span class="line">===================================================</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="匹配单个任意字符"><a href="#匹配单个任意字符" class="headerlink" title=". :匹配单个任意字符"></a>. :匹配单个任意字符</h2><pre><code>当pattern = &apos;.&apos;时候会匹配第一个‘W’ 如果是 pattern=&apos;...&apos;就会匹配‘W66’ 以此类推</code></pre><h2 id="前面表达式n次或0次出现"><a href="#前面表达式n次或0次出现" class="headerlink" title="* :前面表达式n次或0次出现"></a>* :前面表达式n次或0次出现</h2><pre><code>要和其他符号用才可以 现在把pattern=&apos;.*&apos; 就会输出整个字符串 W66618976451,*会使全前面的.出现N次（也就是text的字符长度，每一个都会匹配出来)</code></pre><h2 id="代表着后面的字符作为开头"><a href="#代表着后面的字符作为开头" class="headerlink" title="^ :代表着后面的字符作为开头"></a>^ :代表着后面的字符作为开头</h2><pre><code>&quot;如果没有就匹配不到 比如pattenrn=&apos;^W&apos; ^以后面的字符作为开头进行匹配 因为text是以W开头会匹配结果为W；如果pattern=&apos;S&apos;那么会输出none&quot;</code></pre><h2 id="会匹配行或字符串的结尾"><a href="#会匹配行或字符串的结尾" class="headerlink" title="$ :会匹配行或字符串的结尾"></a>$ :会匹配行或字符串的结尾</h2><pre><code>$以前面一个的字符作为结尾来匹配 比如pattenrn=‘1$’就可以匹配成功</code></pre><h2 id="d-表示数字"><a href="#d-表示数字" class="headerlink" title="/d:表示数字"></a>/d:表示数字</h2><h3 id="根据以下题来结合所学的写出正则"><a href="#根据以下题来结合所学的写出正则" class="headerlink" title="根据以下题来结合所学的写出正则"></a><center>根据以下题来结合所学的写出正则</center></h3><h1 id="1-以W开头"><a href="#1-以W开头" class="headerlink" title="1.以W开头"></a>1.以W开头</h1><pre><code>那么正则为 pattern=&apos;^W&apos; 匹配出来为&apos;W&apos;</code></pre><h1 id="2-以W开头后面跟着一个字符"><a href="#2-以W开头后面跟着一个字符" class="headerlink" title="2.以W开头后面跟着一个字符"></a>2.以W开头后面跟着一个字符</h1><pre><code>pattern=&apos;^W.&apos;   匹配出来为‘W6’</code></pre><h1 id="3-以W开头后面跟着任意数量的数字-h-d"><a href="#3-以W开头后面跟着任意数量的数字-h-d" class="headerlink" title="3.以W开头后面跟着任意数量的数字 ^h/d*"></a>3.以W开头后面跟着任意数量的数字 ^h/d*</h1><pre><code>pattern=&apos;^W\d*&apos; 匹配出来为‘W6668976451’</code></pre><h1 id="4-以1结尾-这个符号前面的内容是结尾的内容"><a href="#4-以1结尾-这个符号前面的内容是结尾的内容" class="headerlink" title="4.以1结尾 $这个符号前面的内容是结尾的内容"></a>4.以1结尾 $这个符号前面的内容是结尾的内容</h1><pre><code>pattern=&apos;1$&apos;    匹配出来为&apos;1&apos;</code></pre><h1 id="5-以h开头，以1结尾，中间可以存在任意数量的字符串"><a href="#5-以h开头，以1结尾，中间可以存在任意数量的字符串" class="headerlink" title="5.以h开头，以1结尾，中间可以存在任意数量的字符串"></a>5.以h开头，以1结尾，中间可以存在任意数量的字符串</h1><pre><code>pattern=&apos;^W.*1$&apos;    匹配出来为&apos;W6668976451&apos;</code></pre><h2 id="贪婪和非贪婪-lt-center"><a href="#贪婪和非贪婪-lt-center" class="headerlink" title="贪婪和非贪婪&lt;/center"></a><center>贪婪和非贪婪&lt;/center</center></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">贪婪与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式在整个表达式匹配成功的前提下，尽可能多的匹配，而非贪婪模式在整个表达式匹配成功的前提下，尽可能少的匹配。非贪婪模式只被部分NFA引擎所支持。 </span><br><span class="line">还是以代码的形式举例</span><br><span class="line">text = <span class="string">'asdioooomdpoipoiplklmd'</span></span><br><span class="line">pattern = <span class="string">''</span></span><br><span class="line">end_text = re.search(pattern,text)</span><br><span class="line"><span class="built_in">print</span>(end_text.group(0))</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<pre><code>首先我需要匹配一个从a到d字符之间的字段 我使用贪婪的方式来匹配：
+pattern=&apos;a(.*)d&apos; 匹配结果为 ‘asdioooomdpoipoiplklmd’
+然后我再用非贪婪来匹配结果：
+pattern=&apos;a(.*?)d&apos; 匹配结果为‘asd’
+我们可以看到a到d字符之间可以有很多组字符串 比如:&apos;asd&apos;,&apos;asdioooomd&apos;,&apos;asdioooomdpoipoiplklmd&apos;
+而我们说的贪婪模式 是从a到d之间获取最长的那一组字符串，而非贪婪模式是匹配到最短的那一组。
+这样就很容易理解贪婪和非贪婪到底是怎么个意思了</code></pre>
       
 
       

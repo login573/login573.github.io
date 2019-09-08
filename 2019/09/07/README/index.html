@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>正则表达式基础语法 | Mr_Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。 正则表达式 它是什么1&amp;lt;b&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。&amp;lt;/b&amp;gt;  正则表. 匹配单个任意字符&amp;lt;br">
+  <meta name="description" content="最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。 正则表达式 它是什么当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。 正则表. 匹配单个任意字符&amp;lt;br&amp;gt;  ^ or \A ^aaa 匹配以aaa开头的字符串&amp;lt;br&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式基础语法">
 <meta property="og:url" content="http://yoursite.com/2019/09/07/README/index.html">
 <meta property="og:site_name" content="Mr_Wu">
-<meta property="og:description" content="最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。 正则表达式 它是什么1&amp;lt;b&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。&amp;lt;/b&amp;gt;  正则表. 匹配单个任意字符&amp;lt;br">
+<meta property="og:description" content="最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。 正则表达式 它是什么当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。 正则表. 匹配单个任意字符&amp;lt;br&amp;gt;  ^ or \A ^aaa 匹配以aaa开头的字符串&amp;lt;br&amp;gt;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-08T11:01:30.191Z">
+<meta property="og:updated_time" content="2019-09-08T11:04:01.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式基础语法">
-<meta name="twitter:description" content="最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。 正则表达式 它是什么1&amp;lt;b&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。&amp;lt;/b&amp;gt;  正则表. 匹配单个任意字符&amp;lt;br">
+<meta name="twitter:description" content="最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。 正则表达式 它是什么当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。 正则表. 匹配单个任意字符&amp;lt;br&amp;gt;  ^ or \A ^aaa 匹配以aaa开头的字符串&amp;lt;br&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="Mr_Wu" type="application/atom+xml">
   
@@ -178,8 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近接触到python的爬虫，感觉挺有意思的，就打算学习了解。现在学到的正则表达式的一点基础就打算记下来慢慢沉淀。</p>
-<h2 id="正则表达式-它是什么"><a href="#正则表达式-它是什么" class="headerlink" title="正则表达式 它是什么"></a><center>正则表达式 它是什么</center></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;b&gt;&amp;nbsp;&amp;nbsp;当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。&lt;/b&gt;</span><br></pre></td></tr></table></figure>
-
+<h2 id="正则表达式-它是什么"><a href="#正则表达式-它是什么" class="headerlink" title="正则表达式 它是什么"></a><center>正则表达式 它是什么</center></h2><p>当我们在爬虫的时候获取得到的文本内容，要从这么多的内容中获取你想要的的一段文字，获取这段文字就需要一个规则，而这个规则就是自定义的正则表达式。</p>
 <h2 id="正则表"><a href="#正则表" class="headerlink" title="正则表"></a><center>正则表</center></h2><pre><code>. 匹配单个任意字符&lt;br&gt;
 
 ^ or \A ^aaa 匹配以aaa开头的字符串&lt;br&gt;
